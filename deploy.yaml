@@ -21,7 +21,9 @@ spec:
         # imagePullPolicy: Never
         readinessProbe:
           httpGet:
-            path: /vehicles/
+            # path: /vehicles/
+            # /vehicles/ is not working, so change to base API instead
+            path: /
             port: 8080
 ---
 apiVersion: v1
