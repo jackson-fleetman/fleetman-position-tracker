@@ -19,12 +19,11 @@ spec:
         - name: SPRING_PROFILES_ACTIVE
           value: production-microservice
         # imagePullPolicy: Never
-        readinessProbe:
-          httpGet:
+        # readinessProbe:
+        #  httpGet:
             # path: /vehicles/
-            # /vehicles/ is not working, so change to base API instead
-            path: /
-            port: 8080
+            # Both "/vehicles/" and "/" probes are not working, so change comment off readiness probe
+        #    port: 8080
 ---
 apiVersion: v1
 kind: Service
